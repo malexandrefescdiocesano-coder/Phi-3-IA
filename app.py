@@ -74,9 +74,15 @@ if user_input := st.chat_input("Digite sua mensagem..."):
                 
                 # Força formatação de código no último prompt de forma segura
                 instrucao_codigo = (
-                    "\n[SISTEMA: Se a resposta contiver códigos, sempre use blocos com a linguagem especificada "
-                    "ex: ```python ... ``` para que o usuário possa copiar facilmente.]"
+                                    # Instrução do sistema atualizada para remover a "palestrinha" de robô
+                instrucao_codigo = (
+                    "\n[SISTEMA: Responda de forma direta, natural e amigável. "
+                    "PROIBIDO dar palestras dizendo que você é uma IA, que não tem sentimentos "
+                    "ou explicar como você foi programado. Se o usuário elogiar, apenas agradeça "
+                    "de forma curta e continue a conversa. Se a resposta contiver códigos, "
+                    "use blocos especificados ex: ```python ... ```]"
                 )
+
                 if historico_completo:
                     historico_completo[-1].parts[0].text += instrucao_codigo
                 
