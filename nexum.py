@@ -4,7 +4,7 @@ from google import genai
 from google.genai import types
 
 st.set_page_config(page_title="Meu Chat Privado", page_icon="🧠", layout="centered")
-st.title("🧠 Meu Chat IA Independente")
+st.title("🦾 Nexum IA!")
 
 # 1. Sistema de Chave Dinâmica (Traga sua própria API Key)
 if "GEMINI_API_KEY" in st.secrets and st.secrets["GEMINI_API_KEY"] != "":
