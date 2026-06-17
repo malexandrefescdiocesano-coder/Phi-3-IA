@@ -131,7 +131,7 @@ if user_input := st.chat_input("Digite sua mensagem..."):
                     "sentimentos ou explicar algoritmos. Se houver códigos, use blocos especificados ex: ```python ... ```]"
                 )
 
-                )
+                
                 if historico_completo:
                     historico_completo[-1].parts[0].text += instrucao_sistema
                 
