@@ -3,7 +3,7 @@ import streamlit as st
 from google import genai
 from google.genai import types
 
-st.set_page_config(page_title="Meu Chat Privado", page_icon="🧠", layout="centered")
+st.set_page_config(page_title="Meu Chat Privado", page_icon="https://github.com/user-attachments/assets/fe76e7d7-e13b-4977-8a79-7c6781c20386", layout="centered")
 st.title("🦾 Nexum IA!")
 
 # 1. Sistema de Chave Dinâmica (Traga sua própria API Key)
