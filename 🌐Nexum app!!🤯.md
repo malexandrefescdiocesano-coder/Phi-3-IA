@@ -5,7 +5,7 @@
 
 # 🌐 Nexum - Seu Chat IA Independente & Multiusuário
 
-[App do Nexum](https://hamgvhxec9mjwroryx3x5i.streamlit.app/)
+[App do Nexum](https://nexum-5ajrbdw9fiundkcgtn3khq.streamlit.app/)
 
 **Nexum** é uma plataforma web interativa de Inteligência Artificial Generativa construída em **Python** com **Streamlit**. O projeto
 foi desenhado sob o conceito *Bring Your Own Key* (Traga sua Própria Chave), garantindo controle total de custos, privacidade e
