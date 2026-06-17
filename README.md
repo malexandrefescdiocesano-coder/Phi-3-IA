@@ -1,6 +1,11 @@
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fe76e7d7-e13b-4977-8a79-7c6781c20386" alt="Nexum Logo" width="300">
+</p>
+
+
 # 🌐 Nexum - Seu Chat IA Independente & Multiusuário
 
-[![App do Nexum]([https://github.com/user-attachments/assets/fe76e7d7-e13b-4977-8a79-7c6781c20386)](https://hamgvhxec9mjwroryx3x5i.streamlit.app/)
+[App do Nexum]](https://hamgvhxec9mjwroryx3x5i.streamlit.app/)
 
 **Nexum** é uma plataforma web interativa de Inteligência Artificial Generativa construída em **Python** com **Streamlit**. O projeto
 foi desenhado sob o conceito *Bring Your Own Key* (Traga sua Própria Chave), garantindo controle total de custos, privacidade e
