@@ -56,7 +56,7 @@ if "historico_carregado" not in st.session_state:
                     st.session_state.total_mensagens += 1
                     st.session_state.total_tokens += len(txt) // 4
                 elif linha.startswith("Gemini: "):
-                    txt = inline.replace("Gemini: ", "").strip()
+                    txt = linha.replace("Gemini: ", "").strip()
                     st.session_state.historico_visual.append({"role": "assistant", "content": txt})
                     st.session_state.total_mensagens += 1
                     st.session_state.total_tokens += len(txt) // 4
