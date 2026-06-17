@@ -13,6 +13,15 @@ isolamento de dados para múltiplos usuários simultâneos.
 
 ---
 
+**AVISO:** Caso queira saber melhor como pegar sua própria API Key, veja este vídeo!
+
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/4b63641a-044b-4796-bb49-ea3cdd649058" width="500" controls>
+    Seu navegador não suporta o player de vídeo.
+  </video>
+</p>
+
+
 ## 🚀 Funcionalidades Premium
 
 *   **🔒 Arquitetura Blindada (Anti-Vazamento):** Chaves de API isoladas por sessão de navegador. O uso de uma pessoa nunca interfere
