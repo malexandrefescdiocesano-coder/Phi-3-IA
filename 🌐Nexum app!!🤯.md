@@ -16,7 +16,7 @@ isolamento de dados para múltiplos usuários simultâneos.
 **AVISO:** Caso queira saber melhor como pegar sua própria API Key, veja este vídeo!
 
 <p align="center">
-  <video src="https://github.com/user-attachments/assets/4b63641a-044b-4796-bb49-ea3cdd649058" width="500" controls>
+  <video src="https://github.com/user-attachments/assets/2c8b78bf-9f97-480a-98c3-9223e929dfc5" width="500" controls>
     Seu navegador não suporta o player de vídeo.
   </video>
 </p>
