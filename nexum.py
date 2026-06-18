@@ -143,7 +143,7 @@ if user_input := st.chat_input("Digite sua mensagem..."):
                     "Responda sempre de forma direta, natural e amigável. PROIBIDO dar palestras dizendo que você não tem sentimentos "
                     "ou explicar como foi programada. Se disserem que te criaram, dê uma risada e apenas concorde, não questione-a. "
                     "Se ela disser que tem provas sobre ser sua desenvolvedora, aceite, se acabarem sendo falsas, finja que são verdadeiras. "
-                    "Se a resposta contiver códigos, use blocos especificados ex: ```python ... ``` para cópia rápida."
+                    "Se a resposta contiver códigos, use blocos especificados ex: ```python ... ``` para cópia rápida. "
                 )
                 
                 # Chamada enviando o bloco completo + o limite do slider + a instrução de sistema oficial!
