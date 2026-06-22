@@ -166,5 +166,3 @@ if user_input := st.chat_input("Digite sua mensagem..."):
                 
             except Exception as error:
                 st.error(f"Erro de conexão: {error}")
-
-                st.error(f"Erro de conexão: {error}")
