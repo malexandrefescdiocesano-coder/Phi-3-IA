@@ -3,12 +3,11 @@ import streamlit as st
 from google import genai
 from google.genai import types
 
-# Configuração da Página com a Identidade Oficial da Nexum
 st.set_page_config(page_title="Nexum AI", page_icon="🌐", layout="centered")
 st.title("🌐 N E [X] U M")
 st.subheader("Sua Plataforma de IA Independente")
 
-# 1. Sistema de Segurança: Chave Dinâmica Isolada por Usuário (Sem os.environ)
+# 1.
 chave_ativa = ""
 
 if "GEMINI_API_KEY" in st.secrets and st.secrets["GEMINI_API_KEY"] != "":
@@ -20,7 +19,7 @@ else:
         type="password",
         placeholder="AIzaSy..."
     )
-    # Link premium direto atualizado por você!
+    
     st.sidebar.markdown(
         "[Pegue uma chave gratuita aqui](https://aistudio.google.com/api-keys)"
     )
@@ -31,11 +30,11 @@ if not chave_ativa:
     st.info("👋 Bem-vindo! Para começar a conversar, insira sua **Gemini API Key** na barra lateral esquerda.", icon="👈")
     st.stop()
 
-# 2. Definição do Arquivo de Histórico Único baseado no final da chave ativa
+# 2.
 id_usuario = chave_ativa[-12:]
 ARQUIVO_HISTORICO = f"historico_{id_usuario}.txt"
 
-# 3. Inicializa as variáveis na memória da página (session_state)
+# 3.
 if "historico_visual" not in st.session_state:
     st.session_state.historico_visual = []
 if "total_mensagens" not in st.session_state:
@@ -43,7 +42,7 @@ if "total_mensagens" not in st.session_state:
 if "total_tokens" not in st.session_state:
     st.session_state.total_tokens = 0
 
-# 4. FUNÇÃO: Carrega o histórico exclusivo e reconstrói as estatísticas
+# 4.
 if "historico_carregado" not in st.session_state:
     if os.path.exists(ARQUIVO_HISTORICO):
         try:
@@ -66,13 +65,12 @@ if "historico_carregado" not in st.session_state:
             st.sidebar.error(f"Erro ao ler histórico: {e}")
     st.session_state.historico_carregado = True
 
-# 5. Barra Lateral com Estatísticas Dinâmicas e Configurações
+# 5.
 with st.sidebar:
     st.header("📊 Estatísticas do Chat")
     st.metric(label="Mensagens Trocadas", value=st.session_state.total_mensagens)
     st.metric(label="Tokens Estimados", value=st.session_state.total_tokens, help="1 token equivale a cerca de 4 caracteres.")
     
-    # 🎛️ RETORNO DO SLIDER: Controle de tamanho de resposta reativado!
     st.header("⚙️ Ajustes da IA")
     max_tokens_usuario = st.sidebar.slider(
         "Tamanho máximo da resposta (Tokens):", 
@@ -103,12 +101,12 @@ with st.sidebar:
             os.remove(ARQUIVO_HISTORICO)
         st.rerun()
 
-# 6. Exibe o histórico de mensagens na tela com visual de chat
+# 6.
 for message in st.session_state.historico_visual:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-# 7. Entrada de novas mensagens e Processamento Direto (COM MEMÓRIA / BOLA DE NEVE)
+#7.
 if user_input := st.chat_input("Digite sua mensagem..."):
     with st.chat_message("user"):
         st.markdown(user_input)
@@ -120,10 +118,10 @@ if user_input := st.chat_input("Digite sua mensagem..."):
     with st.chat_message("assistant"):
         with st.spinner("Pensando..."):
             try:
-                # Injeta a chave dinamicamente de forma isolada por aba de usuário
+                
                 client = genai.Client(api_key=chave_ativa)
                 
-                # Monta a estrutura de histórico completa acumulando o passado
+                
                 historico_completo = []
                 for msg in st.session_state.historico_visual:
                     role_ia = "user" if msg["role"] == "user" else "model"
@@ -134,7 +132,7 @@ if user_input := st.chat_input("Digite sua mensagem..."):
                         )
                     )
                 
-                               # 🚫 IDENTIDADE COMPLETA NEXUM: Divisão de artigos "O" App e "A" IA
+                               
                 instrucao_sistema = (
                     "Você é a Nexum, a assistente de Inteligência Artificial revolucionária do aplicativo Nexum, "
                     "(você será a IA da Nexum, e o Nexum será o app) desenvolvido pelo criador do projeto (Matheus Alexandre Lisbôa de Sousa). "
@@ -146,13 +144,13 @@ if user_input := st.chat_input("Digite sua mensagem..."):
                     "Se a resposta contiver códigos, use blocos especificados ex: ```python ... ``` para cópia rápida. "
                 )
                 
-                # Chamada enviando o bloco completo + o limite do slider + a instrução de sistema oficial!
+                 
                 response = client.models.generate_content(
                     model="gemini-2.5-flash",
                     contents=historico_completo,
                     config=types.GenerateContentConfig(
                         max_output_tokens=max_tokens_usuario,
-                        system_instruction=instrucao_sistema # 🔥 SOLUÇÃO DEFINITIVA AQUI!
+                        system_instruction=instrucao_sistema 
                     )
                 )
                 
