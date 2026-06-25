@@ -57,9 +57,9 @@ pode executar o nosso ecossistema de desenvolvimento através do Google Colab:
 
 ## 📈 Roadmap de Atualizações Futuras
 
-*   [... ] **Módulo de Visão:** Upload e análise multimodal de imagens (PNG/JPG).
-*   [... ] **Leitura de Documentos:** Suporte para carregamento e resumo de arquivos de texto e códigos.
-*   [... ] **Exportação Direta:** Botão para o usuário baixar o histórico de conversas direto para o computador em Markdown.
+*   [...] **Módulo de Visão:** Upload e análise multimodal de imagens (PNG/JPG).
+*   [...] **Leitura de Documentos:** Suporte para carregamento e resumo de arquivos de texto e códigos.
+*   [...] **Exportação Direta:** Botão para o usuário baixar o histórico de conversas direto para o computador em Markdown.
 
 ---
 💡 *Desenvolvido com foco no aprendizado de arquiteturas modernas de IA Generativa, ciclo de vida de aplicações web e segurança da
